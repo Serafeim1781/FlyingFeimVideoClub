@@ -101,8 +101,8 @@ Customer API Base URL:`/api/customer`
   {
     "username": "string",
     "email": "string",
-    "dateOfBirth": "YYYY-MM-DD",  (optional)
-    "isDeactivated": Boolean      (optional, default false)
+    "dateOfBirth": "YYYY-MM-DD",  // (optional)
+    "isDeactivated": Boolean      // (optional, default false)
   }
   ```
 
@@ -122,8 +122,8 @@ Customer API Base URL:`/api/customer`
     {
       "username": "string",
       "email": "string",
-      "dateOfBirth": "YYYY-MM-DD", (optional)
-      "isDeactivated": Boolean (optional, default false)
+      "dateOfBirth": "YYYY-MM-DD",  // (optional)
+      "isDeactivated": Boolean      // (optional, default false)
     },
   ...
   ]
@@ -272,7 +272,7 @@ Customer API Base URL:`/api/rental`
   {
     "movieId": Long,
     "customerId": Long,
-    "rentalDate": "YYYY-MM-DD"  (optional)
+    "rentalDate": "YYYY-MM-DD"  //(optional, default LocalDate.now())
   }
   ```
 

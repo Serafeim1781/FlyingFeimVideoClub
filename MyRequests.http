@@ -1,0 +1,102 @@
+
+### Single Customer Entry Creation
+
+POST http://localhost:8080/api/customer/register
+content-type: application/json
+
+{
+  "email": "keeperGK@serfeim.gr",
+  "username": "Goalie",
+  "dateOfBirth": "1990-12-30"
+}
+
+### Multiply Customer Entries Creation
+
+POST http://localhost:8080/api/customer/list-register
+content-type: application/json
+
+[
+  {
+    "email": "mamakias@lila.gr",
+    "username": "mamak77",
+    "dateOfBirth": "1990-12-30"
+  },
+  {
+	"email": "antons@email.el",
+    "username": "antons",
+    "isDeactivated": "false"
+  },
+  {
+    "username": "oretsisLousi",
+    "email": "oresti.lousi@mail.com",
+    "dateOfBirth": "1969-06-25",
+    "isDeactivated": "false"
+  },
+  {
+	"email": "antons0000001@mail.com",
+    "username": "antons000001",
+    "dateOfBirth": null,
+    "isDeactivated": "false"
+  },
+  {
+    "username": "GabiTerr",
+    "email": "gab.terrio@flamingmail.com",
+    "dateOfBirth": "1969-06-25",
+    "isDeactivated": "false"
+  }
+]
+
+### Multiply Movie Entries Creation
+
+POST http://localhost:8080/api/movie/list-add
+content-type: application/json
+
+[
+  {
+    "title": "YYY",
+    "releaseYear": "2005",
+    "availableStock": "30",
+    "totalStock": "30"
+  },
+  {
+    "title": "Casino Rueda!!",
+    "releaseYear": "2005",
+    "availableStock": "3",
+    "totalStock": "3"
+  },
+  {
+    "title": "Misses And Mister Snitch",
+    "releaseYear": "2005",
+    "availableStock": "0",
+    "totalStock": "0"
+  },
+  {
+    "title": "ZombieSky",
+    "releaseYear": "2008",
+    "availableStock": "0",
+    "totalStock": "300"
+  },
+  {
+    "title": "H.E.D",
+    "releaseYear": "2015",
+    "availableStock": "1",
+    "totalStock": "6"
+  }
+]
+
+### Single Rental Entries Creation
+POST http://localhost:8080/api/rental/new
+
+{
+  "customerId": "3",
+  "movieId": "1",
+  "rentalDate": "2024-08-04"
+}
+
+### Rental Entry Update
+PATCH http://localhost:8080/api/rental/return
+
+{
+  "rentalId": "1",
+  "amountPaid": "606"
+}
